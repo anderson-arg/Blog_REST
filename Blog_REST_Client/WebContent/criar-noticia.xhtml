@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions">
+	<ui:composition template="template.xhtml">
+		<ui:define name="titulo">Index</ui:define>
+		<ui:define name="conteudo">
+			<h1>Cadastrar</h1>
+			<h:messages globalOnly="true" />
+			<h:form>
+				Id: <h:inputText value="#{NoticiaBean.noticia.id}" /><br/>
+				Titulo: <h:inputText value="#{NoticiaBean.noticia.titulo}" /><br/>
+				Autor: <h:inputText value="#{NoticiaBean.noticia.autor}" /><br/>
+				Conteúdo: <h:inputText value="#{NoticiaBean.noticia.conteudo}" /><br/>
+				<h:commandButton value="Cadastrar" actionListener="#{NoticiaBean.criar}"/>
+				<h:commandButton value="Voltar" action="index.xhtml"/>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>  
+</html>
